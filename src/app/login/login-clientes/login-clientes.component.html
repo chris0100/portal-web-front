@@ -1,0 +1,74 @@
+
+
+  <!-- Body -->
+  <div class="modal-body">
+
+    <div class="text-center">
+      <h4 class="font-weight-bold dark-grey-text"><i class="fas fa-users fa-1x"></i> Portal Web</h4>
+    </div>
+
+
+    <div class="md-form md-outline font-weight-bold">
+      <input type="text" id="nit-cliente" class="form-control">
+      <label for="nit-cliente">Nit Cliente</label>
+    </div>
+
+
+    <div class="row" style="margin-top: -20px">
+      <div class="col-md-12 select-outline">
+
+        <select class="mdb-select md-form md-outline colorful-select dropdown-primary">
+          <option value="" disabled selected>Seleccionar</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+        <label>Sucursal</label>
+
+      </div>
+    </div>
+
+
+    <div class="row" style="margin-top: -20px">
+      <div class="col-md-12 select-outline">
+
+        <select class="mdb-select md-form md-outline colorful-select dropdown-primary">
+          <option value="" disabled selected class="font-weight-bold">Seleccionar</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+        <label>Punto de envío</label>
+
+      </div>
+    </div>
+
+
+    <div class="md-form md-outline font-weight-bold" style="margin-top: 0px">
+      <input type="password" id="password" class="form-control ">
+      <label for="password">Contraseña</label>
+    </div>
+
+
+    <div class="text-center">
+      <button class="btn btn-primary btn-rounded"
+              type="submit"
+              value="loginC"
+              (click)="loginCliente()"
+      >
+        Ingresar <i class="fas fa-sign-in-alt ml-1"></i>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <div class="modal-footer display-footer">
+    <div class="options text-center text-md-right">
+      <p>¿Necesitas <a href="#" class="blue-text">Ayuda?</a></p>
+      <p>¿Contraseña <a href="#" class="blue-text">Olvidada?</a></p>
+    </div>
+  </div>
+
+
+

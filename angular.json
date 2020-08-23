@@ -21,12 +21,20 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/resources"
             ],
             "styles": [
-              "src/styles.css"
+              "src/resources/css/bootstrap.css",
+              "src/resources/css/mdb.css",
+              "src/resources/css/modules/animations-extended.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/resources/js/jquery-3.4.1.min.js",
+              "src/resources/js/popper.min.js",
+              "src/resources/js/bootstrap.js",
+              "src/resources/js/mdb.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -62,6 +70,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "port": 4201,
             "browserTarget": "new-portal-web-front:build"
           },
           "configurations": {
@@ -121,4 +130,5 @@
       }
     }},
   "defaultProject": "new-portal-web-front"
+
 }
