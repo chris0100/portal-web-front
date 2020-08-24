@@ -27,13 +27,22 @@
             "styles": [
               "src/resources/css/bootstrap.css",
               "src/resources/css/mdb.css",
-              "src/resources/css/modules/animations-extended.css"
+              "src/resources/css/modules/animations-extended.css",
+              "src/resources/css/addons/datatables-select.min.css",
+              "src/resources/css/addons/datatables.min.css"
             ],
             "scripts": [
               "src/resources/js/jquery-3.4.1.min.js",
               "src/resources/js/popper.min.js",
               "src/resources/js/bootstrap.js",
-              "src/resources/js/mdb.min.js"
+              "src/resources/js/mdb.min.js",
+              "src/resources/js/addons/datatables.min.js",
+              "src/resources/js/addons/datatables-select.min.js",
+              "src/resources/js/lista.js",
+              "src/resources/js/tablas.js",
+              "src/resources/js/login.js",
+              "src/resources/js/pedidos.js",
+              "src/resources/js/historial.js"
             ]
           },
           "configurations": {
@@ -130,5 +139,4 @@
       }
     }},
   "defaultProject": "new-portal-web-front"
-
 }

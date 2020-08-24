@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="z-index: 3">
 
 
-  <a href="index.html" style="margin-left: 80px">
+  <a [routerLink]="['/panel-clientes']" style="margin-left: 80px">
     <img alt="Logo" src="resources/img/logos/logo-eka.png" class="img-fluid" style="max-width: 100px"/>
   </a>
 
@@ -22,12 +22,12 @@
     <ul class="navbar-nav ml-auto">
 
       <li class="nav-item dropdown mr-2">
-        <a class="nav-link dropdown-toggle waves-effect" href="#" id="userDropdown" data-toggle="dropdown"
+        <a class="nav-link dropdown-toggle waves-effect"  id="userDropdown" data-toggle="dropdown"
            aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user"></i> HERMECO | HERMECO COMPANY
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="view/login/login.html">Cerrar Sesión</a>
+          <a class="dropdown-item" [routerLink]="['/login']">Cerrar Sesión</a>
         </div>
       </li>
 
@@ -36,7 +36,9 @@
       </li>
 
       <li class="nav-item mr-5">
-        <a class="nav-link waves-effect" href="view/dashboard/configuracion-usuario.html"><i class="fas fa-cog"></i> Configuración</a>
+        <a class="nav-link waves-effect" [routerLink]="['/configuracion']">
+          <i class="fas fa-cog"></i> Configuración
+        </a>
       </li>
 
 
@@ -70,32 +72,34 @@
       <!-- Links -->
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Panel
+          <a class="nav-link" [routerLink]="['/panel-clientes']">Panel
             <span class="sr-only">(current)</span>
           </a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="view/dashboard/lista-usuarios.html">Lista de Usuarios</a>
+          <a class="nav-link" [routerLink]="['/lista-usuarios']">Lista de Usuarios</a>
         </li>
+
         <!-- Dropdown -->
         <li class="nav-item dropdown multi-level-dropdown">
           <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle w-100">Gestión de Pedidos</a>
           <ul class="dropdown-menu mt-2 rounded-0 primary-color-dark border-0 z-depth-1">
 
-            <li class="dropdown-item dropdown-submenu p-0">
-              <a href="view/dashboard/crear-pedido.html" class="text-white w-100">Crear Nuevo Pedido</a>
+            <li class="dropdown-item dropdown-submenu" style="padding: 0.5rem 0 0.5rem 0!important;">
+              <a [routerLink]="['/crear-pedido']" class="text-white w-100" >Crear Nuevo Pedido</a>
             </li>
 
-            <li class="dropdown-item dropdown-submenu p-0">
-              <a href="view/dashboard/lista-pedidos-borrador.html" class="text-white w-100">Pedidos en Borrador</a>
+            <li class="dropdown-item dropdown-submenu" style="padding: 0.5rem 0 0.5rem 0!important;">
+              <a [routerLink]="['/pedidos-borrador']" class="text-white w-100">Pedidos en Borrador</a>
             </li>
 
-            <li class="dropdown-item dropdown-submenu p-0">
-              <a href="view/dashboard/historial-pedidos.html" class="text-white w-100">Historial de Pedidos</a>
+            <li class="dropdown-item dropdown-submenu" style="padding: 0.5rem 0 0.5rem 0!important;">
+              <a [routerLink]="['/historial-pedidos']" class="text-white w-100">Historial de Pedidos</a>
             </li>
 
-            <li class="dropdown-item dropdown-submenu p-0">
-              <a href="view/dashboard/lista-pedidos-verificacion.html" class="text-white w-100">Pedidos en Verificación</a>
+            <li class="dropdown-item dropdown-submenu" style="padding: 0.5rem 0 0.5rem 0!important;">
+              <a [routerLink]="['/pedidos-verificacion']" class="text-white w-100">Pedidos en Verificación</a>
             </li>
 
           </ul>
@@ -104,3 +108,4 @@
     </div>
   </div>
 </nav>
+

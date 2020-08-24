@@ -1,7 +1,6 @@
+<!-- Body -->
 
-
-  <!-- Body -->
-  <div class="modal-body">
+<div class="modal-body">
 
     <div class="text-center">
       <h4 class="font-weight-bold dark-grey-text"><i class="fas fa-users fa-1x"></i> Portal Web</h4>
@@ -9,7 +8,12 @@
 
 
     <div class="md-form md-outline font-weight-bold">
-      <input type="text" id="nit-cliente" class="form-control">
+      <input type="text"
+             id="nit-cliente"
+             class="form-control"
+             name="nit-cliente"
+             [(ngModel)]="usuario.username"
+      >
       <label for="nit-cliente">Nit Cliente</label>
     </div>
 
@@ -45,8 +49,13 @@
 
 
     <div class="md-form md-outline font-weight-bold" style="margin-top: 0px">
-      <input type="password" id="password" class="form-control ">
-      <label for="password">Contraseña</label>
+      <input type="password"
+             id="password-cliente"
+             class="form-control"
+             name="password-cliente"
+             [(ngModel)]="usuario.password"
+      >
+      <label for="password-cliente">Contraseña</label>
     </div>
 
 
