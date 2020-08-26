@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+// carga de variable para mdbootstrap
+declare var tablas;
 
 @Component({
   selector: 'app-lista-usuarios',
@@ -12,6 +14,10 @@ export class ListaUsuariosComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+
+    // Inicializacion para cargar js
+    new tablas();
+
   }
 
 }

@@ -38,7 +38,6 @@ export class AuthService {
   }
 
 
-
   // Metodo get para el token
   public get token(): string {
     if (this._token != null) {
@@ -52,8 +51,6 @@ export class AuthService {
     }
     return null;
   }
-
-
 
 
   // Se realiza login del usuario
@@ -71,7 +68,7 @@ export class AuthService {
 
     // Parametros de inicio de sesion
     const params = new URLSearchParams();
-    params.set('grant-type', 'params');
+    params.set('grant_type', 'password');
     params.set('username', usuario.username);
     params.set('password', usuario.password);
     console.log('estos son los parametros de ingreso: ' + params);
@@ -115,6 +112,26 @@ export class AuthService {
   isAuthenticated(): boolean {
     const objPayload = this.obtenerDatosToken(this.token);
     return objPayload != null && objPayload.user_name.length > 0;
+  }
+
+
+  // Cierra la sesion limpiando los datos del token y del session storage
+  logout(): void {
+    this._token = null;
+    this._usuario = null;
+
+    sessionStorage.clear();
+    sessionStorage.removeItem('token');
+    sessionStorage.removeItem('usuario');
+  }
+
+
+  // Revisa si el usuario tiene un rol incluido
+  hasRole(role: string): boolean {
+    if (this.usuario.roles.includes(role)) {
+      return true;
+    }
+    return false;
   }
 
 

@@ -7,11 +7,13 @@
     </div>
 
 
+  <form method="post">
+
     <div class="md-form md-outline font-weight-bold">
       <input type="text"
              id="nit-cliente"
              class="form-control"
-             name="nit-cliente"
+             name="username"
              [(ngModel)]="usuario.username"
       >
       <label for="nit-cliente">Nit Cliente</label>
@@ -52,7 +54,7 @@
       <input type="password"
              id="password-cliente"
              class="form-control"
-             name="password-cliente"
+             name="password"
              [(ngModel)]="usuario.password"
       >
       <label for="password-cliente">Contraseña</label>
@@ -62,13 +64,16 @@
     <div class="text-center">
       <button class="btn btn-primary btn-rounded"
               type="submit"
-              value="loginC"
+              value="loginCliente"
               (click)="loginCliente()"
       >
         Ingresar <i class="fas fa-sign-in-alt ml-1"></i>
       </button>
     </div>
-  </div>
+
+  </form>
+
+</div>
 
 
   <!-- Footer -->

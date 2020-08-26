@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import swal from 'sweetalert2';
 import {Router} from '@angular/router';
 import {Usuario} from '../usuario';
@@ -8,7 +8,6 @@ import {AuthService} from '../auth.service';
   selector: 'app-login-clientes',
   templateUrl: './login-clientes.component.html'
 })
-
 
 
 export class LoginClientesComponent implements OnInit {
@@ -21,14 +20,23 @@ export class LoginClientesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+
+    // Revisa si el usuario esta autenticado, para redireccionar
+    if (this.authService.isAuthenticated()) {
+      swal.fire('Login invalido', `Hola ${this.authService.usuario.username}, ya se encuentra logueado`, 'info');
+      this.router.navigate(['/panel-clientes']);
+    }
   }
 
 
-  // Login por el menu de Cliente
+
+
+  // Ingreso para redireccionar a el menu de Cliente
   loginCliente(): void {
 
     // Revisa que no esten vacios los campos
-    if (this.usuario.username === null || this.usuario.password === null){
+    if (this.usuario.username == null || this.usuario.password == null) {
       swal.fire('Error de ingreso', 'Username o Password vacios', 'error');
       return;
     }
@@ -51,7 +59,7 @@ export class LoginClientesComponent implements OnInit {
         this.router.navigate(['/panel-clientes']);
       },
       error => {
-        if (error.status === 400){
+        if (error.status === 400) {
           swal.fire('Error Login', 'Username o Password incorrectos', 'error');
         }
       }
